@@ -22,7 +22,8 @@
       <div class="content markdown-body" id="content" v-html="article.content"></div>
     </div>
     <div class="sidebar">
-      <div
+      <el-scrollbar>
+        <div
         class="title"
         v-for="(header, index) in headersList"
         :key="index"
@@ -32,6 +33,7 @@
       >
         {{ header.innerText }}
       </div>
+      </el-scrollbar>
     </div>
   </div>
   <el-backtop :right="100" :bottom="100" />
@@ -167,9 +169,9 @@ onMounted(async() => {
     position: sticky;
     top: 4rem;
     width:10rem;
+    height: 31.25rem;
     margin-right: 2rem;
     float: right;
-    height: 6.25rem;
     .active{
       border-left:.125rem solid #409eff;
       .tag{
@@ -178,11 +180,16 @@ onMounted(async() => {
       }
     }
     .title{
-      margin: 1rem;
+      margin: .625rem;
+      height:2rem;
+      line-height: 2rem;
       padding-left: 0.3125rem;
       overflow:hidden;
       text-overflow:ellipsis;
       white-space:nowrap;
+      &:hover{
+        background-color: #f2f8ff;
+      }
     }
   }
 }

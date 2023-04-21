@@ -1,6 +1,6 @@
 <script setup>
   import Header from './components/header.vue'
-  import bottom from './components/footer.vue'
+
 </script>
 
 <template>
@@ -9,7 +9,7 @@
     <router-view></router-view>
     <router-view name="sidebar"></router-view>
   </div>
-  <bottom></bottom>
+  <router-view name="footer"></router-view>
 </template>
 
 <style lang="less" scoped>
@@ -18,6 +18,7 @@
   display: flex;
   justify-content: center;
   margin-top:5rem;
+  margin-bottom: 8rem;
   min-height: 62.5rem;
 }
 </style>
