@@ -117,6 +117,7 @@ function showDetail(id) {
   &:hover {
     box-shadow: 0 0 0.5rem 0.05rem rgba(0, 0, 0, 0.3);
     transition-duration: 0.7s;
+    cursor:pointer;
   }
   & > div {
     margin: 0.3125rem;

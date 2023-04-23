@@ -184,6 +184,7 @@ Axios.get("/label")
       & :hover{
       transform: scale(1.1);
       transition-duration: 0.7s;
+      cursor:pointer;
     }
     }
   }

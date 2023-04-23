@@ -189,6 +189,7 @@ onMounted(async() => {
       white-space:nowrap;
       &:hover{
         background-color: #f2f8ff;
+        cursor:pointer;
       }
     }
   }
