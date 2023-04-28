@@ -119,7 +119,7 @@ function handleSearch() {
     .home {
       display: flex;
       margin-left: 0.625rem;
-      width: 6rem;
+      min-width: 4rem;
       align-items: center;
       text-align: center;
       justify-content: center;

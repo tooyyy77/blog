@@ -82,7 +82,7 @@ function showDetail(id) {
 </script>
 <style lang="less" scoped>
 .articleLab {
-  width: 42rem;
+  min-width: 42rem;
   margin: 1.25rem 0;
 }
 .article {
