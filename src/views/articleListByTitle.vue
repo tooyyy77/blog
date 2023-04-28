@@ -104,7 +104,7 @@ function showDetail(id) {
 }
 .articleLab {
   margin: 1.25rem 0.625rem;
-  width: 42rem;
+  min-width: 42rem;
   .article {
   display: flex;
   flex-direction: column;

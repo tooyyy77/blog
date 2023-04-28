@@ -91,7 +91,7 @@ function showDetail(id) {
 <style lang="less" scoped>
 .articleLab {
   margin: 1.25rem 0.625rem;
-  width: 42rem;
+  min-width: 42rem;
   .article {
     display: flex;
     flex-direction: column;
