@@ -80,7 +80,7 @@ function setAnchor() {
   const content = document.getElementById("content");
   headersList.value = content.querySelectorAll("h1, h2, h3, h4, h5, h6");
   Array.from(headersList.value).forEach((item) => {
-    offsetTopArr.value.push(item.offsetTop);
+    offsetTopArr.value.push(item.offsetTop-70);
     item.level = parseInt(item.tagName[1]); // add a 'level' property to each item
   });
 }
@@ -112,7 +112,8 @@ function onScroll() {
 }
 
 function jumpTo(index) {
-  const scrollTop = offsetTopArr.value[index] - 1;
+  const scrollTop = offsetTopArr.value[index]-1;
+  console.log(scrollTop)
   window.scrollTo({
     top: scrollTop,
     behavior: "smooth",
