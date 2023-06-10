@@ -36,7 +36,6 @@
       </el-scrollbar>
     </div>
   </div>
-  <el-backtop :right="100" :bottom="100" />
 </template>
 
 <script setup>
@@ -86,6 +85,7 @@ function setAnchor() {
 }
 
 
+
 // 防抖函数
 function debounce(func, delay) {
   let timer;
@@ -113,7 +113,6 @@ function onScroll() {
 
 function jumpTo(index) {
   const scrollTop = offsetTopArr.value[index]-1;
-  console.log(scrollTop)
   window.scrollTo({
     top: scrollTop,
     behavior: "smooth",
@@ -122,8 +121,8 @@ function jumpTo(index) {
 
 onMounted(async() => {
   await setArticle();
-  setAnchor();
-  window.addEventListener("scroll", debounce(onScroll, 10), false);
+  await setAnchor()
+  window.addEventListener("scroll", debounce(onScroll, 10), false);;
   //代码块高亮
   hljs.registerLanguage('plaintext', () => ({
   disableAutodetect: true,
@@ -140,6 +139,12 @@ onMounted(async() => {
   margin-left: 20rem;
   margin-top:2rem
 }
+@media screen and (max-width: 768px) {
+    .skeleton{
+      margin-left:0 !important; 
+      width:100%;
+    }
+  }
 .icon{
   vertical-align: middle;
 }
@@ -150,6 +155,12 @@ onMounted(async() => {
   .article {
     flex: 1;
     margin-left: 20rem;
+  }
+  @media screen and (max-width: 768px) {
+    .article{
+      margin-left:0 !important; 
+      width:100%;
+    }
   }
   .header{
     .info{
@@ -162,9 +173,12 @@ onMounted(async() => {
     }
   }
   .content{
-    width:50rem;
+    width:100%;
     overflow: visible;
     word-wrap: break-word;
+  }
+  @media screen and (max-width: 768px) {
+    .sidebar{display: none;}
   }
   .sidebar{
     position: sticky;

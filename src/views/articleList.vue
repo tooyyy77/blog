@@ -33,7 +33,6 @@
       </div>
     </template>
   </div>
-  <el-backtop :right="100" :bottom="100" />
 </template>
 
 <script setup>
@@ -81,8 +80,14 @@ function showDetail(id) {
 }
 </script>
 <style lang="less" scoped>
+@media screen and (max-width: 768px) {
 .articleLab {
-  min-width: 42rem;
+  width:100% !important;
+  margin: 1.25rem 0;
+}
+}
+.articleLab {
+  width: 42rem;
   margin: 1.25rem 0;
 }
 .article {
@@ -110,9 +115,21 @@ function showDetail(id) {
   .article-header {
     display: flex;
     align-items: center;
+
+    @media screen and (max-width: 768px) {
+      h2{width:100%;}
+    }
     h2 {
       flex: 1;
       margin: 0;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    @media screen and (max-width: 954px) {
+      .tag{
+        display: none;
+      }
     }
     .tag {
       margin: 0.3125rem;
@@ -124,6 +141,11 @@ function showDetail(id) {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    a{
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+    }
   }
 
   .bar {
@@ -134,6 +156,10 @@ function showDetail(id) {
     span {
       margin-left: 0.3125rem;
       font-size: small;
+
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
     }
   }
 }

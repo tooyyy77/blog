@@ -10,6 +10,11 @@
   </div>
 </template>
 <style lang="less" scoped>
+@media screen and (max-width: 768px) {
+  .helloPage{
+    display: none !important; 
+  }
+}
 .helloPage {
   height: 59.375rem;
   display: flex;
