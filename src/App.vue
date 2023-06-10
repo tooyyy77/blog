@@ -10,6 +10,7 @@
     <router-view name="sidebar"></router-view>
   </div>
   <router-view name="footer"></router-view>
+  <el-backtop :right="50" :bottom="50" />
 </template>
 
 <style lang="less" scoped>
