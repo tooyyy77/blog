@@ -185,6 +185,7 @@ onMounted(async() => {
     top: 4rem;
     width:10rem;
     height: 31.25rem;
+    margin-left: 10rem;
     margin-right: 2rem;
     float: right;
     .active{
