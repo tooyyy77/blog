@@ -151,13 +151,15 @@ onMounted(async() => {
 .article-wrapper {
   scroll-behavior: 0.2s;
   display: flex;
-  width:100%;
+  width: 100%;
   .article {
     flex: 1;
-    margin-left: 20rem;
+    margin-left: 10rem;
+    overflow: auto;
   }
   @media screen and (max-width: 768px) {
     .article{
+
       margin-left:0 !important; 
       width:100%;
     }
